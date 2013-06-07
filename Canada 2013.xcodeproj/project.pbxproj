@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1F3338176200B400D9D6AD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1F3337176200B400D9D6AD /* Icon@2x.png */; };
 		3C5005BE1761F5D40054F29B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5005BD1761F5D40054F29B /* UIKit.framework */; };
 		3C5005C01761F5D40054F29B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5005BF1761F5D40054F29B /* Foundation.framework */; };
 		3C5005C21761F5D40054F29B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5005C11761F5D40054F29B /* CoreGraphics.framework */; };
@@ -20,10 +21,10 @@
 		3C5005E21761F6C40054F29B /* FCCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5005E11761F6C40054F29B /* FCCTableViewCell.m */; };
 		3C5005E51761F7B30054F29B /* FCCDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5005E41761F7B30054F29B /* FCCDataObject.m */; };
 		3C5005E81761F7FD0054F29B /* FCCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5005E71761F7FD0054F29B /* FCCDataManager.m */; };
-		3C5005EA1761FC420054F29B /* icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C5005E91761FC420054F29B /* icon@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C1F3337176200B400D9D6AD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3C5005BA1761F5D40054F29B /* Canada 2013.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Canada 2013.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5005BD1761F5D40054F29B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C5005BF1761F5D40054F29B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,7 +46,6 @@
 		3C5005E41761F7B30054F29B /* FCCDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCDataObject.m; sourceTree = "<group>"; };
 		3C5005E61761F7FD0054F29B /* FCCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCDataManager.h; sourceTree = "<group>"; };
 		3C5005E71761F7FD0054F29B /* FCCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCDataManager.m; sourceTree = "<group>"; };
-		3C5005E91761FC420054F29B /* icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "icon@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				3C5005C51761F5D40054F29B /* Canada 2013-Info.plist */,
-				3C5005E91761FC420054F29B /* icon@2x.jpg */,
 				3C5005C61761F5D40054F29B /* InfoPlist.strings */,
+				3C1F3337176200B400D9D6AD /* Icon@2x.png */,
 				3C5005C91761F5D40054F29B /* main.m */,
 				3C5005CB1761F5D40054F29B /* Canada 2013-Prefix.pch */,
 				3C5005CF1761F5D40054F29B /* Default.png */,
@@ -178,7 +178,7 @@
 				3C5005D01761F5D40054F29B /* Default.png in Resources */,
 				3C5005D21761F5D40054F29B /* Default@2x.png in Resources */,
 				3C5005D41761F5D40054F29B /* Default-568h@2x.png in Resources */,
-				3C5005EA1761FC420054F29B /* icon@2x.jpg in Resources */,
+				3C1F3338176200B400D9D6AD /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +309,7 @@
 				3C5005DF1761F5D40054F29B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
