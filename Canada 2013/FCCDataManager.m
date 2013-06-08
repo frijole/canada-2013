@@ -21,42 +21,42 @@ static NSArray *_dataObjects;
         // set 'em up!
         _dataObjects = [NSArray arrayWithObjects:
                         
-                        [FCCDataObject dataObject:@"Circuit Opens"
-                                           starts:@"8:00 am"
+                        [FCCDataObject dataObject:@"Venue opens to public"
+                                           starts:@"7:30 am"
                                              ends:nil],
                         
-                        [FCCDataObject dataObject:@"Ferrari Challenge"
-                                           starts:@"8:50 am"
-                                             ends:@"9:10 am"],
+                        [FCCDataObject dataObject:@"Ferrari Challenge Qualifying"
+                                           starts:@"8:45 am"
+                                             ends:@"9:15 am"],
                         
-                        [FCCDataObject dataObject:@"Free Practice 1"
+                        [FCCDataObject dataObject:@"Free Practice 3"
                                            starts:@"10:00 am"
-                                             ends:@"11:30 am"],
+                                             ends:@"11:00 am"],
                         
-                        [FCCDataObject dataObject:@"CTCC"
-                                           starts:@"11:55 am"
-                                             ends:@"12:55 pm"],
+                        [FCCDataObject dataObject:@"Porsche CT3 Cup Qualifying"
+                                           starts:@"11:15 am"
+                                             ends:@"11:45 am"],
                         
-                        [FCCDataObject dataObject:@"Free Practice 2"
-                                           starts:@"2:00 pm"
-                                             ends:@"3:30 pm"],
+                        [FCCDataObject dataObject:@"F1 Qualifying"
+                                           starts:@"1:00 pm"
+                                             ends:@"2:00 pm"],
                         
-                        [FCCDataObject dataObject:@"Ferrari Challenge"
-                                           starts:@"3:55 pm"
-                                             ends:@"4:15 pm"],
+                        [FCCDataObject dataObject:@"Formula 1600" 
+                                           starts:@"2:20 pm" 
+                                             ends:@"3:00 pm"],
                         
-                        [FCCDataObject dataObject:@"CTCC"
-                                           starts:@"4:30 pm"
+                        [FCCDataObject dataObject:@"CTCC" 
+                                           starts:@"3:20 pm" 
+                                             ends:@"4:00 pm"],
+                        
+                        [FCCDataObject dataObject:@"Ferrari Challenge Race" 
+                                           starts:@"4:20 pm" 
                                              ends:@"5:00 pm"],
                         
-                        [FCCDataObject dataObject:@"Porsche GT3 Cup Challenge"
-                                           starts:@"5:15 pm"
-                                             ends:@"5:45 pm"],
-                        
-                        [FCCDataObject dataObject:@"Formula 1600"
-                                           starts:@"6:00 pm"
-                                             ends:@"6:30 pm"],
-                        
+                        [FCCDataObject dataObject:@"Porsche GT3 Cup Race" 
+                                           starts:@"5:20 pm" 
+                                             ends:@"6:00 pm"],
+                                                
                         nil];
     }
     

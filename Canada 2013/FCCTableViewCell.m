@@ -15,6 +15,10 @@
     self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        
+        [self.detailTextLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+        [self.detailTextLabel setTextColor:[UIColor blackColor]];
+        
     }
     return self;
 }

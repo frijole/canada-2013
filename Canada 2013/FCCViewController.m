@@ -27,13 +27,19 @@
     if ( self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil] )
     {
         // setup
-        [self setTitle:@"Canadian GP - Friday"];
+        [self setTitle:@"Canadian GP - Saturday"];
         
+        // create and add our table
         UITableView *tmpTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        [tmpTableView setDataSource:self];
-        [tmpTableView setDelegate:self];
+        [tmpTableView setAutoresizingMask:(UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth)];
         [self.view addSubview:tmpTableView];
+        
+        // set the property
         [self setTableView:tmpTableView];
+
+        // and rig for functionality
+        [self.tableView setDataSource:self];
+        [self.tableView setDelegate:self];
         
         [self.tableView registerClass:[FCCTableViewCell class]
                forCellReuseIdentifier:kFCCViewControllerTableViewCellIdentifier];
@@ -47,23 +53,30 @@
     return [FCCDataManager dataObjects].count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // get a cell
     UITableViewCell *rtnCell = [tableView dequeueReusableCellWithIdentifier:kFCCViewControllerTableViewCellIdentifier forIndexPath:indexPath];
     
+    // and the event for this row
     FCCDataObject *tmpObject = [[FCCDataManager dataObjects] objectAtIndex:indexPath.row];
     
-    [rtnCell.textLabel setText:tmpObject.title];
-    
-    NSString *tmpSubtitle = nil;
-    
+    // put the time(s) up top...
+    NSString *tmpTitle = nil;
     if ( tmpObject.starts && tmpObject.ends )
-        tmpSubtitle = [NSString stringWithFormat:@"%@ - %@", tmpObject.starts, tmpObject.ends];
+        tmpTitle = [NSString stringWithFormat:@"%@ - %@", tmpObject.starts, tmpObject.ends];
     else if ( tmpObject.starts && !tmpObject.ends )
-        tmpSubtitle = tmpObject.starts;
-    
-    [rtnCell.detailTextLabel setText:tmpSubtitle];
-    
+        tmpTitle = tmpObject.starts;
+    [rtnCell.textLabel setText:tmpTitle];
+
+    // ...and the name of the session below
+    [rtnCell.detailTextLabel setText:tmpObject.title];
+
     return rtnCell;
 }
 
