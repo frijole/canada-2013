@@ -27,7 +27,7 @@
     if ( self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil] )
     {
         // setup
-        [self setTitle:@"Canadian GP - Saturday"];
+        [self setTitle:@"Canadian GP - Sunday"];
         
         // create and add our table
         UITableView *tmpTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -55,7 +55,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0f;
+    CGFloat rtnHeight = 60.0f;
+    
+    FCCDataObject *tmpObject = [[FCCDataManager dataObjects] objectAtIndex:indexPath.row];
+    CGFloat tmpTextHeight = [tmpObject.title sizeWithFont:[UIFont boldSystemFontOfSize:16.0f] constrainedToSize:CGSizeMake(300.0f, INT_MAX)].height;
+
+    if ( tmpTextHeight > 20 )
+        rtnHeight += 20.0f;
+    
+    return rtnHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

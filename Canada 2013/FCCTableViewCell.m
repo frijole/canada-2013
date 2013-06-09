@@ -18,6 +18,7 @@
         
         [self.detailTextLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
         [self.detailTextLabel setTextColor:[UIColor blackColor]];
+        [self.detailTextLabel setNumberOfLines:2];
         
     }
     return self;
